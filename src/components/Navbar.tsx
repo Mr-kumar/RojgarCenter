@@ -116,20 +116,20 @@ const Navbar = () => {
           }`}
         >
           <div className="flex flex-col p-4 space-y-4">
-            <Link href="/showcase" className="py-2 px-4 rounded">
-              Showcase
+            <Link href="/" className="py-2 px-4 rounded">
+              Home
             </Link>
             <Link href="/docs" className="py-2 px-4 rounded">
-              Docs
+              Latest Jobs
             </Link>
-            <Link href="/blog" className="py-2 px-4 rounded">
-              Blog
+            <Link href="/result" className="py-2 px-4 rounded">
+              Result
             </Link>
-            <Link href="/templates" className="py-2 px-4 rounded">
-              Templates
+            <Link href="/admitcard" className="py-2 px-4 rounded">
+              Admit Card
             </Link>
             <Link href="/enterprise" className="py-2 px-4 rounded">
-              Enterprise
+              Answer Key
             </Link>
           </div>
         </div>

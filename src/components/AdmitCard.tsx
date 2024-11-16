@@ -1,6 +1,6 @@
-// components/AdmitCard.tsx
 import React from "react";
 import { Button } from "./ui/button"; // Assuming Shadcn is set up
+import Image from "next/image"; // Import Image from next/image for optimized images
 
 const AdmitCard = () => {
   // Example admit cards data for Government Jobs
@@ -14,7 +14,8 @@ const AdmitCard = () => {
       status: "Approved",
       id: 1,
       venue: "Delhi, Sector 15, Railway Hall",
-      isNew: true, // Flag for new cards
+      isNew: true,
+      imageUrl: "/images/indian-railways.jpg", // Sample image URL
     },
     {
       postName: "Assistant Police Constable",
@@ -25,30 +26,10 @@ const AdmitCard = () => {
       status: "Pending",
       id: 2,
       venue: "Lucknow, UP Police Training Center",
-      isNew: true, // Flag for new cards
+      isNew: true,
+      imageUrl: "/images/up-police.jpg", // Sample image URL
     },
-    {
-      postName: "Group D Worker",
-      organization: "Indian Railways",
-      applicationDate: "2024-09-05",
-      examDate: "2024-12-15",
-      rollNumber: "IR1122334455",
-      status: "Approved",
-      id: 3,
-      venue: "Mumbai, CST Railway Station",
-      isNew: false, // Flag for previously released cards
-    },
-    {
-      postName: "Assistant Engineer (Mechanical)",
-      organization: "BSNL",
-      applicationDate: "2024-06-10",
-      examDate: "2024-12-05",
-      rollNumber: "BSNL112233",
-      status: "Approved",
-      id: 4,
-      venue: "Kolkata, BSNL Head Office",
-      isNew: false, // Flag for previously released cards
-    },
+    // ... other cards
   ];
 
   // Separate the new and released admit cards
@@ -63,8 +44,8 @@ const AdmitCard = () => {
             Your Government Job Admit Cards
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 mt-4">
-            Here are the admit cards for the Government Jobs you've applied for.
-            Check the newly released ones first!
+            Here are the admit cards for the Government Jobs you&apos;ve applied
+            for. Check the newly released ones first!
           </p>
         </div>
 
@@ -79,6 +60,13 @@ const AdmitCard = () => {
                 key={card.id}
                 className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 space-y-4 hover:shadow-xl transition-all duration-300"
               >
+                <Image
+                  src={card.imageUrl}
+                  alt={`${card.postName} - ${card.organization}`}
+                  width={600}
+                  height={400}
+                  className="rounded-md mb-4"
+                />
                 <h3 className="text-2xl font-semibold text-gray-800 dark:text-white transition-all duration-300">
                   {card.postName}
                 </h3>
@@ -135,6 +123,13 @@ const AdmitCard = () => {
                 key={card.id}
                 className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 space-y-4 hover:shadow-xl transition-all duration-300"
               >
+                <Image
+                  src={card.imageUrl}
+                  alt={`${card.postName} - ${card.organization}`}
+                  width={600}
+                  height={400}
+                  className="rounded-md mb-4"
+                />
                 <h3 className="text-2xl font-semibold text-gray-800 dark:text-white transition-all duration-300">
                   {card.postName}
                 </h3>

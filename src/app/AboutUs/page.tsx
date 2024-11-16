@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const AboutUs = () => {
   return (
@@ -62,9 +63,11 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Team Member 1 */}
             <div className="text-center p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md">
-              <img
+              <Image
                 src="https://via.placeholder.com/150"
                 alt="Team Member 1"
+                width={150}
+                height={150}
                 className="w-32 h-32 rounded-full mx-auto mb-4"
               />
               <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -78,9 +81,11 @@ const AboutUs = () => {
             </div>
             {/* Team Member 2 */}
             <div className="text-center p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md">
-              <img
+              <Image
                 src="https://via.placeholder.com/150"
                 alt="Team Member 2"
+                width={150}
+                height={150}
                 className="w-32 h-32 rounded-full mx-auto mb-4"
               />
               <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -96,9 +101,11 @@ const AboutUs = () => {
             </div>
             {/* Team Member 3 */}
             <div className="text-center p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md">
-              <img
+              <Image
                 src="https://via.placeholder.com/150"
                 alt="Team Member 3"
+                width={150}
+                height={150}
                 className="w-32 h-32 rounded-full mx-auto mb-4"
               />
               <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
